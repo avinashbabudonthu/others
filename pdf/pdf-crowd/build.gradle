@@ -1,0 +1,22 @@
+plugins {
+    id "java"
+    id "maven"
+    id "application"
+}
+
+repositories {
+    mavenLocal()
+    mavenCental()
+}
+
+dependencies {
+    compile "com.pdfcrowd:pdfcrowd:4.10.0"
+    testCompile 'junit:junit:4.12'
+}
+
+group = 'com.pdf.crowd'
+version = '1.0'
+description = 'pdf-crowd'
+
+sourceCompatibility = "1.8"
+targetComtibility = "1.8"
