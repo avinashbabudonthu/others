@@ -7,6 +7,7 @@
 * [Jackson JSON](jackson-json)
 * [Jenkins](jenkins)
 * [JFrog](jfrog)
+* [Lombok](lombok)
 * [Nexus](nexus)
 * [PDF](pdf)
 * [Sonarqube](sonarqube)
