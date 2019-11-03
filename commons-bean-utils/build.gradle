@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = 'http://repo.maven.apache.org/maven2'
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:3.8.1'
+}
+
+group = 'commons.bean.utils'
+version = '1.0'
+description = 'commons-bean-utils'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
