@@ -9,6 +9,7 @@
 * [JFrog](jfrog)
 * [Lombok](lombok)
 * [Nexus](nexus)
+* [Open CSV](open-csv)
 * [PDF](pdf)
 * [Sonarqube](sonarqube)
 * [Swagger](swagger)
