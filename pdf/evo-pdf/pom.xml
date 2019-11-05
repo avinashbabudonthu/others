@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>evohtmltopdf</groupId>
 			<artifactId>evohtmltopdf</artifactId>
-			<version>7.5</version>
+			<version>8.0</version>
 		</dependency>
 	</dependencies>
 

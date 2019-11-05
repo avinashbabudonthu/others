@@ -1,10 +1,10 @@
 package com.html.to.pdf;
 
-import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -21,9 +21,10 @@ public class HTMLToPdf {
 
 	@Test
 	public void htmlToPdf() throws Exception {
-		final String outFilePath = "C:/practice-projects/tools/pdf/evo-pdf/output-files/html-to-pdf.pdf";
-		byte[] outputPdfBuffer = convert("C:/supports/bhavana/slr-test/slr-test/ESLRtest.html");
+		String outFilePath = "[path]" + "\\pdf-" + System.currentTimeMillis() + ".pdf";
+		byte[] outputPdfBuffer = convert("[path]/index.html");
 		writeBytesToFile(outputPdfBuffer, outFilePath);
+		System.out.println("PDF Generateed in the location=" + outFilePath);
 	}
 
 	public byte[] convert(final String inputFile) throws Exception {
@@ -43,14 +44,8 @@ public class HTMLToPdf {
 		drawHeader(htmlToPdfConverter, drawHeaderLine);
 		drawFooter(htmlToPdfConverter, addPageNumbers, drawFooterLine);
 
-		// String html = readHtmlFile(inputFile);
-		String html = "<html><body><h1>Testing</h1></body></html>";
+		String html = readHtmlFile(inputFile);
 
-		System.out.println("------------- html content ------------");
-		System.out.println(html);
-		System.out.println("---------------------------------------");
-
-		// String baseUrl = "https://riskreporttest.paloaltonetworks.com/";
 		String baseUrl = "https://www.google.com/";
 
 		try {
@@ -66,9 +61,9 @@ public class HTMLToPdf {
 
 	private String readHtmlFile(final String inputFile) throws Exception {
 		final StringBuilder stringBuilder = new StringBuilder();
-		try (BufferedReader bufferedReader = Files.newBufferedReader(Paths.get(inputFile).toAbsolutePath())) {
-			stringBuilder.append(bufferedReader.readLine());
-		}
+
+		List<String> allLines = Files.readAllLines(Paths.get(inputFile).toAbsolutePath());
+		allLines.stream().forEach(line -> stringBuilder.append(line));
 
 		return stringBuilder.toString();
 	}
