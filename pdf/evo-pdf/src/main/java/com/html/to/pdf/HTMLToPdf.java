@@ -46,7 +46,7 @@ public class HTMLToPdf {
 
 		String html = readHtmlFile(inputFile);
 
-		String baseUrl = "https://www.google.com/";
+		String baseUrl = "http://www.google.com";
 
 		try {
 			byte[] outputPdfBuffer = htmlToPdfConverter.convertHtml(html, baseUrl);
