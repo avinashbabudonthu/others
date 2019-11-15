@@ -1,2 +1,2 @@
 # List of Projects
-* [Sonarqueb setup with MySQL](setup-with-mysql)
+* [Sonarqube 7.8 setup with MySQL](setup-with-mysql)
