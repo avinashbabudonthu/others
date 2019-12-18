@@ -7,6 +7,7 @@
 * [Jackson JSON](jackson-json)
 * [Jenkins](jenkins)
 * [JFrog](jfrog)
+* [JMeter](jmeter)
 * [Lombok](lombok)
 * [Nexus](nexus)
 * [Open CSV](open-csv)
