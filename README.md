@@ -4,6 +4,7 @@
 * [Commons Compress](commons-compress)
 * [Commons Lang3](commons-lang3)
 * [GSON](gson)
+* [Hibernate Validator](hibernate-validator)
 * [Jackson JSON](jackson-json)
 * [Jenkins](jenkins)
 * [JFrog](jfrog)
