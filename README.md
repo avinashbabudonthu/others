@@ -5,6 +5,7 @@
 * [Commons Lang3](commons-lang3)
 * [GSON](gson)
 * [Hibernate Validator](hibernate-validator)
+* [HTML Sanitizer](html-sanitizer)
 * [Jackson JSON](jackson-json)
 * [Jenkins](jenkins)
 * [JFrog](jfrog)
