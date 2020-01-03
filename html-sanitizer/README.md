@@ -9,3 +9,6 @@ mvn archetype:generate -DgroupId=com.html.sanitizer -DartifactId=html-sanitizer 
 ```
 gradle init --type pom
 ```
+
+## Examples
+* [HTML Sanitize Method](src/test/java/com/java/html/sanitizer/HtmlSanitizer.java) - sanitize()

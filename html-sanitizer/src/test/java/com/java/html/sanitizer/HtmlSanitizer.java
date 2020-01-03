@@ -17,12 +17,20 @@ import lombok.extern.slf4j.Slf4j;
 public class HtmlSanitizer {
 
 	private String readFileUsingFilesAndRelativePath() throws IOException {
-		List<String> allLines = Files.readAllLines(Paths.get("src/main/resources/html/1.html"));
+		List<String> allLines = Files.readAllLines(Paths.get("src/main/resources/html/2.html"));
 		// allLines.stream().forEach(System.out::println);
 		String fileContent = allLines.stream().collect(Collectors.joining());
 		return fileContent;
 	}
 
+	/**
+	 * Documentation: https://github.com/OWASP/java-html-sanitizer
+	 * 
+	 * Please note that the elements "a", "font", "img", "input" and "span" need to be explicitly whitelisted 
+	 * using the allowWithoutAttributes() method if you want them to be allowed through the filter when 
+	 * these elements do not include any attributes
+	 * 
+	 */
 	@SneakyThrows
 	@Test
 	public void sanitize() {
@@ -31,7 +39,8 @@ public class HtmlSanitizer {
 
 		// @formatter:off
 		PolicyFactory policyFactory = new HtmlPolicyBuilder()
-				.allowElements("html", "body", "ul", "li", "a", "h1")
+				.allowElements("html", "body", "ul", "li", "a", "h1", "img")
+				.allowWithoutAttributes("img")
 				.allowAttributes("href").onElements("a")
 				.allowAttributes("style").globally()
 				.allowAttributes("class").globally()
