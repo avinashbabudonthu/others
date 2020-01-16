@@ -18,6 +18,8 @@
 ```
 ### Examples
 * [GET API](src/test/java/com/web/client/GetControllerTest.java)
+* [POST API](src/test/java/com/web/client/PostControllerTest.java)
+* [Mock WebClient](src/test/java/com/web/client/WebClientMock.java)
 
 ### Materials
 * [https://www.callicoder.com/spring-5-reactive-webclient-webtestclient-examples/](https://www.callicoder.com/spring-5-reactive-webclient-webtestclient-examples/)
