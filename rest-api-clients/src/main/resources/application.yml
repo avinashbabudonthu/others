@@ -4,4 +4,4 @@ server.port: 9000
 logging:
   level.org: info
   pattern.console: '%X{global-transaction-id} %d{yyyy-MM-dd HH:mm:ss} %-5level %C:%L - %m%n'
-  file: 'logs/app.log'
+  file: logs/app.log
