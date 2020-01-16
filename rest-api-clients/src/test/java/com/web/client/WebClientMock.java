@@ -58,6 +58,6 @@ public class WebClientMock {
 
 		Employee employee = webClientAPICall(webClientMock);
 
-		System.out.println(employee.getId());
+		log.info("employee-id={}", employee.getId());
 	}
 }
