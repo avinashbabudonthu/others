@@ -34,4 +34,14 @@ public class JsonStringToObject {
 		// employees-map=[{emp1=Employee(id=1, name=jim)}, {emp2=Employee(id=2, name=jill)}]
 		log.info("employees-map={}", employeesMap);
 	}
+
+	@SneakyThrows
+	@Test
+	public void jsonStringToObjectList() {
+		final String jsonString = "[{\"id\": \"1\", \"name\": \"jim\"}, {\"id\": \"2\", \"name\": \"jill\"}]";
+		List<Employee> employeeList = new ObjectMapper().readValue(jsonString, new TypeReference<List<Employee>>() {
+		});
+
+		log.info("employee-list={}", employeeList);
+	}
 }
