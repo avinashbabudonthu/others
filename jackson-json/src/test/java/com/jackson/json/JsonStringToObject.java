@@ -1,5 +1,6 @@
 package com.jackson.json;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -39,9 +40,18 @@ public class JsonStringToObject {
 	@Test
 	public void jsonStringToObjectList() {
 		final String jsonString = "[{\"id\": \"1\", \"name\": \"jim\"}, {\"id\": \"2\", \"name\": \"jill\"}]";
+
+		// method 1
 		List<Employee> employeeList = new ObjectMapper().readValue(jsonString, new TypeReference<List<Employee>>() {
 		});
-
 		log.info("employee-list={}", employeeList);
+
+		// method 2
+		Employee[] employeeList2 = new ObjectMapper().readValue(jsonString, Employee[].class);
+		Arrays.stream(employeeList2).forEach(System.out::println);
+
+		// method 3
+		List<Employee> employeeList3 = Arrays.asList(new ObjectMapper().readValue(jsonString, Employee[].class));
+		log.info("employee-list3={}", employeeList3);
 	}
 }
