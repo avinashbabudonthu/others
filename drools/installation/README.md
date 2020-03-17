@@ -10,7 +10,6 @@
 ![picture alt](1.jpg "select - org.drools.updatesite")
 	* Select `Drools and jBPM`
 	* Click `Next` button
-	* Click `Next` button
 ![picture alt](2.jpg "select - org.drools.updatesite")	
 	* Accept `license agreement`
 ![picture alt](3.jpg "select - org.drools.updatesite")	
