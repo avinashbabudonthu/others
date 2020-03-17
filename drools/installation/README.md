@@ -21,7 +21,7 @@
 ![picture alt](6.jpg "select - org.drools.updatesite")
 	* Click `Add` button
 ![picture](7.jpg)
-	* Click `Create a new Drools 5 Runtime` and select until `droolsjbpm-tools-distribution-5.3.0.Final\binaries`
+	* Click `Create a new Drools 5 Runtime` and select until `droolsjbpm-tools-distribution-5.3.0.Final\binaries`. Click `Ok` button
 ![picture](8.jpg)
-	* Click `Ok` button. Select `Drools 5.3.0 Final runtime`
+	* Select `Drools 5.3.0 Final runtime`
 ![picture](9.jpg)	
