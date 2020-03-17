@@ -6,9 +6,8 @@
 	* Open Eclipse - Help - Install New Software...
 	* Click 'Add' button
 	* Click 'Local' button
-	* Select `droolsjbpm-tools-distribution-5.3.0.Final\binaries\org.drools.updatesite`
+	* Select `droolsjbpm-tools-distribution-5.3.0.Final\binaries\org.drools.updatesite`. Select `Drools and jBPM` and Click `Next` button
 ![picture alt](1.jpg "select - org.drools.updatesite")
-	* Select `Drools and jBPM` and Click `Next` button
 	* Click `Next` button
 ![picture alt](2.jpg "select - org.drools.updatesite")	
 	* Accept `license agreement`
