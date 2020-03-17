@@ -3,6 +3,7 @@
 * [Commons Bean Utils](commons-bean-utils)
 * [Commons Compress](commons-compress)
 * [Commons Lang3](commons-lang3)
+* [Drools](drools)
 * [GSON](gson)
 * [Hibernate Validator](hibernate-validator)
 * [HTML Sanitizer](html-sanitizer)
