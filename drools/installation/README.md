@@ -9,16 +9,16 @@
 	* Select `droolsjbpm-tools-distribution-5.3.0.Final\binaries\org.drools.updatesite`. Select `Drools and jBPM` and Click `Next` button
 ![picture alt](1.jpg "select - org.drools.updatesite")
 	* Click `Next` button
-![picture alt](2.jpg "select - org.drools.updatesite")	
+![picture](2.jpg)	
 	* Accept `license agreement`
-![picture alt](3.jpg "select - org.drools.updatesite")	
+![picture](3.jpg)	
 	* Click `Finish` button
 	* Click `Install anyway` button
-![picture alt](4.jpg "select - org.drools.updatesite")
+![picture](4.jpg)
 	* Click `Restart Now` button
-![picture alt](5.jpg "select - org.drools.updatesite")
+![picture](5.jpg)
 	* After restart - go to - `Window/Preferences/Drools/Installed Drools Runtimes`
-![picture alt](6.jpg "select - org.drools.updatesite")
+![picture](6.jpg)
 	* Click `Add` button
 ![picture](7.jpg)
 	* Click `Create a new Drools 5 Runtime` and select until `droolsjbpm-tools-distribution-5.3.0.Final\binaries`. Click `Ok` button
