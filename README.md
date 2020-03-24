@@ -15,6 +15,7 @@
 * [Nexus](nexus)
 * [Open CSV](open-csv)
 * [PDF](pdf)
+* [REST API](rest-api)
 * [Rest API Clients](rest-api-clients)
 * [Sonarqube](sonarqube)
 * [Swagger](swagger)
