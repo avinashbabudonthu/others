@@ -20,3 +20,4 @@
 * [Rest API Clients](rest-api-clients)
 * [Sonarqube](sonarqube)
 * [Swagger](swagger)
+* [Visual VM](visual-vm)
