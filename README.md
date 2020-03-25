@@ -3,6 +3,7 @@
 * [Commons Bean Utils](commons-bean-utils)
 * [Commons Compress](commons-compress)
 * [Commons Lang3](commons-lang3)
+* [Dozer](dozer)
 * [Drools](drools)
 * [Garbage Collection](garbage-collection)
 * [GSON](gson)
