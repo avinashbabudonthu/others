@@ -2,6 +2,8 @@
 * Find all employees
 	* Method - `GET`
 	* URI - `/employees`
+	* Return body with status `200 OK` if data found
+	* Return status `204 No Content` if no data found
 	
 * Find employee by id
 	* Method - `GET`
@@ -11,6 +13,9 @@
 	* Method - `POST`
 	* URI - '/employees`
 	* Body - `Employee Json`
+	* Return URI to find newly created object like - `/employees/{id}`
+	* Return status code `201 - Created`
+		* Spring Boot - `org.springframework.http.ResponseEntity.created(uri).body(student);`
 
 * Full update employee
 	* Method - `PUT`
