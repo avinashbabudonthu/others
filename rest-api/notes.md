@@ -35,3 +35,5 @@
 * Implement global exception handling
 * Convert entities to model objects and return as API response
 * Apply pagination to find/search APIs
+* Add validations 
+	* Return proper error code and error messages
