@@ -4,9 +4,9 @@
 * Extract zip
 * Install in Eclipse
 	* Open Eclipse - Help - Install New Software...
-	* Click 'Add' button
-	* Click 'Local' button
-	* Select `droolsjbpm-tools-distribution-5.3.0.Final\binaries\org.drools.updatesite`. Select `Drools and jBPM` and Click `Next` button
+	* Paste this entry 
+		* https://download.jboss.org/drools/release/7.34.0.Final/org.drools.updatesite/
+	* Select `Drools and jBPM` check box
 ![picture alt](1.jpg "select - org.drools.updatesite")
 	* Click `Next` button
 ![picture](2.jpg)	
