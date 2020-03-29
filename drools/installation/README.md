@@ -22,4 +22,4 @@
 	* Click `Add` button. Click `Browse` and select until `droolsjbpm-tools-distribution-7.34.0.Final\binaries`. Click `Ok` button
 ![picture](7.jpg)
 	* Select `Drools 7.34.0.202003021112`
-![picture](8.jpg)	
+![picture](10.jpg)	
