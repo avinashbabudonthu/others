@@ -94,3 +94,9 @@ student.setName("jim jack");
 	* studentMap = ["1": "jim", "2": "jack"]
 	* studentMap["1"] returns jim
 	* studentMap.1 returns jim
+	
+## Stateless Sessions
+* Usecases
+	* Validations
+	* Calculation
+	* Routing and Filtering
