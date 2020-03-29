@@ -1,5 +1,5 @@
 ## Drools Plugin Installation in Eclipse
-* Download drools binaries from https://download.jboss.org/drools/release/7.34.0.Final/org.drools.updatesite/
+* Download drools binaries from https://download.jboss.org/drools/release/7.34.0.Final/
 	* Download `droolsjbpm-tools-distribution-7.34.0.Final.zip` file
 * Extract zip
 * Install in Eclipse
