@@ -10,7 +10,6 @@ rule "Age greater than 21"
 	when
 		s: Student( isAgeGreaterThan21() )
 	then
-		// studentAgeValidation = new StudentAgeValidation();
 		studentAgeValidation.printMessage(s.getName(), s.getAge().toString(), "Age is greater than 21");
 end
 
