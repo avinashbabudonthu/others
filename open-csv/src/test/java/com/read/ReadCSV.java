@@ -1,143 +1,44 @@
 package com.read;
 
 import com.opencsv.CSVReader;
+import com.opencsv.bean.ColumnPositionMappingStrategy;
+import com.opencsv.bean.CsvToBean;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
+import open.csv.model.Student;
 import org.junit.Test;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 
 @Slf4j
 public class ReadCSV {
 
-    public Map<String, Integer> orgoidCount(List<String> orgoids){
-        Map<String, Integer> valuesCount = new HashMap<>();
-        for(String orgoid : orgoids){
-            if(null == valuesCount.get(orgoid)){
-                valuesCount.put(orgoid, 1);
-            }else{
-                valuesCount.put(orgoid, valuesCount.get(orgoid)+1);
-            }
-        }
-        return valuesCount;
-    }
-
-    private void printOrgoidsOccuredMoreThanOnce(Map<String, Integer> valuesCount){
-        StringBuffer keyValue = new StringBuffer();
-        valuesCount.forEach((key,value)->{
-            if(value>1){
-                log.info("{}-{}", key, value);
-                keyValue.append(key).append("-").append(value);
-            }
-        });
-        log.info("keyValue={}", keyValue);
-    }
-
     @SneakyThrows
     @Test
-    public void readCsvToList(){
-        String[] nextLine;
-        final String filePath = "C:\\Work\\email-prod-stats\\13-june-2019\\%s.csv";
+    public void readCSVFileToListOfObjects(){
+        // create mapping strategy
+        ColumnPositionMappingStrategy<Student> columnPositionMappingStrategy = new ColumnPositionMappingStrategy<Student>();
+        columnPositionMappingStrategy.setType(Student.class);
+        String[] columns = {"id", "name", "course"};
+        columnPositionMappingStrategy.setColumnMapping(columns);
 
-        try(CSVReader csvReader = new CSVReader(new FileReader(new File(String.format(filePath, "email-processed-clients"))))){
-            List<String> values = new ArrayList<>();
-            while (null != (nextLine = csvReader.readNext())){
-                values.addAll(Stream.of(nextLine)
-                        .filter(line -> StringUtils.isNotBlank(line))
-                        .map(value -> value.trim())
-                        .collect(Collectors.toList()));
-            }
+        // create csv reader
+        URL url = getClass().getClassLoader().getResource("students.csv");
+        File file = new File(url.getPath());
+        CSVReader csvReader = new CSVReader(new FileReader(file));
 
-            System.out.println(values.size());
-            Map<String, Integer> orgoidCount = orgoidCount(values);
-            printOrgoidsOccuredMoreThanOnce(orgoidCount);
-        };
+        // set column mapping strategy, csv reader to parse and create objects
+        CsvToBean<Student> csvToBean = new CsvToBean<>();
+        csvToBean.setMappingStrategy(columnPositionMappingStrategy);
+        csvToBean.setCsvReader(csvReader);
+
+        List<Student> studentList = csvToBean.parse();
+        studentList.forEach(System.out::println);
     }
-
-    @SneakyThrows
-    @Test
-    public void readCsvToSet(){
-        String[] nextLine;
-        final String filePath = "C:\\Work\\email-prod-stats\\13-june-2019\\%s.csv";
-
-        try(CSVReader csvReader = new CSVReader(new FileReader(new File(String.format(filePath, "total-wave-clients"))))){
-            Set<String> values = new HashSet<>();
-            while (null != (nextLine = csvReader.readNext())){
-                 values.addAll(Stream.of(nextLine)
-                         .filter(line -> StringUtils.isNotBlank(line))
-                         .map(value -> value.trim())
-                         .collect(Collectors.toList()));
-            }
-
-            System.out.println(values.size());
-        };
-    }
-
-    @SneakyThrows
-    @Test
-    public void emailNotProcessedClients(){
-        String[] nextLine;
-        final String filePath = "C:\\Work\\email-prod-stats\\13-june-2019\\%s.csv";
-        Set<String> totalWaveClients = new HashSet<>();
-        Set<String> emailProcessedClients = new HashSet<>();
-        Set<String> clientsWithoutManagers = new HashSet<>();
-        Set<String> emailNotProcessedClients = new HashSet<>();
-
-        // total wave clients
-        try(CSVReader csvReader = new CSVReader(new FileReader(new File(String.format(filePath, "total-wave-clients"))))){
-
-            while (null != (nextLine = csvReader.readNext())){
-                totalWaveClients.addAll(Stream.of(nextLine)
-                        .filter(line -> StringUtils.isNotBlank(line))
-                        .map(value -> value.trim())
-                        .collect(Collectors.toList()));
-            }
-
-            log.info("total-number-of-wave-clients={}",totalWaveClients.size());
-//            totalWaveClients.stream().forEach(System.out::println);
-            //totalWaveClients.stream().forEach(System.out::println);
-        };
-
-        // email processed clients
-        try(CSVReader csvReader = new CSVReader(new FileReader(new File(String.format(filePath, "email-processed-clients"))))){
-
-            while (null != (nextLine = csvReader.readNext())){
-                emailProcessedClients.addAll(Stream.of(nextLine)
-                        .filter(line -> StringUtils.isNotBlank(line))
-                        .map(value -> value.trim())
-                        .collect(Collectors.toList()));
-            }
-
-            log.info("number-of-email-processed-clients={}",emailProcessedClients.size());
-//            emailProcessedClients.stream().forEach(System.out::println);
-        };
-
-        // clients without managers
-        try(CSVReader csvReader = new CSVReader(new FileReader(new File(String.format(filePath, "clients-without-managers"))))){
-
-            while (null != (nextLine = csvReader.readNext())){
-                clientsWithoutManagers.addAll(Stream.of(nextLine)
-                        .filter(line -> StringUtils.isNotBlank(line))
-                        .map(value -> value.trim())
-                        .collect(Collectors.toList()));
-            }
-
-            log.info("clients-without-managers={}",clientsWithoutManagers.size());
-//            clientsWithoutManagers.stream().forEach(System.out::println);
-        };
-
-        // email not processed clients
-        emailNotProcessedClients.addAll(totalWaveClients);
-        emailNotProcessedClients.removeAll(emailProcessedClients);
-        emailNotProcessedClients.removeAll(clientsWithoutManagers);
-        log.info("number-of-email-not-processed-clients={}", emailNotProcessedClients.size());
-        emailNotProcessedClients.stream().forEach(System.out::println);
-    }
-
 
 }

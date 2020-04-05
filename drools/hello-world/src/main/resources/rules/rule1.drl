@@ -8,24 +8,24 @@ global StudentAgeValidation studentAgeValidation;
 rule "Age greater than 21"
 	dialect "mvel"
 	when
-		Student( isAgeGreaterThan21() )
+		s: Student( isAgeGreaterThan21() )
 	then
-		studentAgeValidation = new StudentAgeValidation();
-		studentAgeValidation.printMessage("Age is greater than 21");
+		// studentAgeValidation = new StudentAgeValidation();
+		studentAgeValidation.printMessage(s.getName(), s.getAge().toString(), "Age is greater than 21");
 end
 
 rule "Age less than 15"
 	dialect "mvel"
 	when
-		Student(isAgeLessThan15())
+		s: Student(isAgeLessThan15())
 	then
-		System.out.println("Age is less than 15");
+		studentAgeValidation.printMessage(s.getName(), s.getAge().toString(), "Age is less than 15");
 end
 
 rule "Correct Age"
 	dialect "mvel"
 	when 
-		Student( !isAgeGreaterThan21() && !isAgeLessThan15())
+		s: Student( !isAgeGreaterThan21() && !isAgeLessThan15())
 	then
-		System.out.println("Correct age");
+		studentAgeValidation.printMessage(s.getName(), s.getAge().toString(), "Correct age");
 end

@@ -22,12 +22,15 @@ public class StudentAgeValidation {
 		KieContainer kieContainer = KieServices.Factory.get().getKieClasspathContainer();
 		StatelessKieSession statelessKieSession = kieContainer.newStatelessKieSession("StudentAgeValidationRule1");
 
+		statelessKieSession.setGlobal("studentAgeValidation", new StudentAgeValidation());
+
 		log.info("drools engine started");
 		statelessKieSession.execute(studentList);
 		log.info("drools engine completed");
 	}
 
-	public void printMessage(String message) {
-		System.out.println(message);
+	public void printMessage(String... messages) {
+		String str = String.join(", ", messages);
+		System.out.println(str);
 	}
 }
