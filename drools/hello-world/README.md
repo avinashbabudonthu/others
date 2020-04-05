@@ -15,7 +15,7 @@ mvn archetype:generate -DgroupId=hello.world -DartifactId=hello-world -Dversion=
 * [rule1.drl](src/main/resources/rules/rule1.drl)
 * [kmodule.xml](src/main/resources/META-INF/kmodule.xml)
 * Model class - [Student.java](src/main/java/hello/world/model/Student.java)
-* Main class to initiate rule execution - [StudentAgeValidation.java](src/main/java/hello/world/StudnetAgeValidation.java)
+* Main class to initiate rule execution - [StudentAgeValidation.java](src/main/java/hello/world/StudentAgeValidation.java)
 	* Create student list on which rules has to execute
 	* Create `KieContainer`, `KieSession` objects
 	* To `KieSession` give `ksession` name given in [kmodule.xml](src/main/resources/META-INF/kmodule.xml) file
