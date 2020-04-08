@@ -5,6 +5,14 @@ import hello.world.StudentAgeValidation;
 
 global StudentAgeValidation studentAgeValidation;
 
+rule "is student name present"
+	dialect "mvel"
+	when
+		Student(name == null)
+	then
+		System.out.println("student name does not exist");
+end
+
 rule "Age greater than 21"
 	dialect "mvel"
 	when

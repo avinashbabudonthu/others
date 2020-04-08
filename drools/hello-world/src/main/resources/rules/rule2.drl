@@ -1,0 +1,8 @@
+import hello.world.model.Student;
+
+rule "is student name is john"
+	when
+		student: Student("john" == name)
+	then
+		System.out.println("student name is " + student.getName().toUpperCase());
+end
