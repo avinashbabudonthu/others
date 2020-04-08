@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
   
-  <kbase packages="rules">
-    <ksession name="StudentAgeValidationRule1" type="stateless"/>
+  <kbase packages="student.rules">
+    <ksession name="StudentRules" type="stateless"/>
+  </kbase>
+  
+  <kbase packages="employee.rules">
+    <ksession name="EmployeeRules" type="stateless"/>
   </kbase>
   
 </kmodule>

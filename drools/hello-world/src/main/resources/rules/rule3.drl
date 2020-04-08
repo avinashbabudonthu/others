@@ -1,9 +1,0 @@
-import hello.world.model.Student;
-
-rule "and condition - check for student name and age"
-	when
-		student: Student("john" == name && 14 == age)
-	then
-		
-		System.out.println("student name " + student.getName().toUpperCase() + ", age is " + student.getAge());
-end
