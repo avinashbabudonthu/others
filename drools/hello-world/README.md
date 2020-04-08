@@ -16,7 +16,7 @@ mvn archetype:generate -DgroupId=hello.world -DartifactId=hello-world -Dversion=
 ## Examples
 ### Students Rules
 * [StudentRules.java](src/main/java/hello/world/StudentRules.java)
-* [student-rules.drl](src/main/resources/rules/student-rules.drl)
+* [student-rules.drl](src/main/resources/student/rules/student-rules.drl)
 * [kmodule.xml](src/main/resources/META-INF/kmodule.xml)
 	* ksession name - `StudentRules`
 * Model class - [Student.java](src/main/java/hello/world/model/Student.java)
@@ -38,6 +38,6 @@ mvn archetype:generate -DgroupId=hello.world -DartifactId=hello-world -Dversion=
 		
 ### Employee Rules
 * [EmployeeRules.java](src/main/java/hello/world/EmployeeRules.java)
-* [employee-adress-rules.drl](src/main/resources/rules/employee-adress-rules.drl)
+* [employee-adress-rules.drl](src/main/resources/employee/rules/employee-adress-rules.drl)
 * [kmodule.xml](src/main/resources/META-INF/kmodule.xml)
 	* ksession name - `EmployeeRules`
