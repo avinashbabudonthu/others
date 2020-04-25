@@ -121,17 +121,37 @@
 	* http://localhost:9000/getStudent/100
 	* http://localhost:9000/getAllStudents
 	
-### Level 1 - Improper use of HTTP Methods
-* Exposing resources with proper URI like
-	* http://localhost:9000/students
-	* http://localhost:9000/students/100
+### Level 1 - Exposing resources with proper URI but Improper use of HTTP Methods
+* http://localhost:9000/students
+* http://localhost:9000/students/100
 
-### Level 2
-* Level 1 + Propert use of HTTP Methods
+### Level 2 - Exposing resources with proper URI + Proper use of HTTP Methods
 * Exposing resources with proper URI like
 	* POST - http://localhost:9000/students
 	* GET - http://localhost:9000/students/100
 	* DELETE - http://localhost:9000/students
 
 ### Level 3
-* Level 2 + HATEOAS
+* Exposing resources with proper URI + Proper use of HTTP Methods + HATEOAS
+
+## Versioning REST APIs
+* Versioning using URI
+	* /v1/students
+	* /v2/students
+* Using Request Param
+```
+@GetMapping(value = "/students/param", params = "version=1", produces = MediaType.APPLICATION_JSON_VALUE)
+
+@GetMapping(value = "/students/param", params = "version=2", produces = MediaType.APPLICATION_JSON_VALUE)
+```
+* Header versioning
+```
+@GetMapping(value = "/students/header", headers = "version=1", produces = MediaType.APPLICATION_JSON_VALUE)
+@GetMapping(value = "/students/header", headers = "version=2", produces = MediaType.APPLICATION_JSON_VALUE)
+```
+
+* Content Type versioning
+```
+@GetMapping(value = "/students/produces", produces = "application/my.app-v1+json")
+@GetMapping(value = "/students/produces", produces = "application/my.app-v2+json")
+```
