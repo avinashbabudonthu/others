@@ -1,0 +1,48 @@
+{
+                "name": "Practitioner",
+                "isCurrentRole": true,
+                "domains": [
+                    {
+                        "name": "HR",
+                        "key": 2
+                    },
+                    {
+                        "name": "Payroll",
+                        "key": 3
+                    },
+                    {
+                        "name": "Engagement",
+                        "key": 17
+                    }
+                ],
+                "additionalcontrols": [
+                    {
+                        "ACCESS_HR_INTERNAL_BENCHMARK": true
+                    },
+                    {
+                        "ACCESS_PAYROLL_INTERNAL_BENCHMARK": true
+                    },
+                    {
+                        "ACCESS_ENGAGEMENT_INTERNAL_BENCHMARK": true
+                    },
+                    {
+                        "ACCESS_HR_ADP_BENCHMARK": true
+                    },
+                    {
+                        "ACCESS_PAYROLL_ADP_BENCHMARK": true
+                    },
+                    {
+                        "ACCESS_ENGAGEMENT_ADP_BENCHMARK": true
+                    },
+                    {
+                        "ACCESS_EARN_CODE_TAGGING_TOOL": true
+                    },
+                    {
+                        "ACCESS_EMPLOYEE_DETAILS": true
+                    },
+                    {
+                        "ACCESS_ORGANISATION_PROFILE_SETTINGS": true
+                    }
+                ],
+                "metrics": []
+            }
