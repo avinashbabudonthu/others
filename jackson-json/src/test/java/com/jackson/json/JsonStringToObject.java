@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.jackson.json.model.Days;
 import com.jackson.json.model.Employee;
 
 import lombok.SneakyThrows;
@@ -53,5 +54,15 @@ public class JsonStringToObject {
 		// method 3
 		List<Employee> employeeList3 = Arrays.asList(new ObjectMapper().readValue(jsonString, Employee[].class));
 		log.info("employee-list3={}", employeeList3);
+	}
+
+	@SneakyThrows
+	@Test
+	public void enumJsonToEnumObject() {
+		String enumJsonString = new ObjectMapper().writeValueAsString(Days.MONDAY);
+		log.info("enumJsonString={}", enumJsonString);
+
+		Days days = new ObjectMapper().readValue("THURSDAY", Days.class);
+
 	}
 }
