@@ -1,4 +1,4 @@
-# Avro Serialization By Generating Class
+# Avro Serialization DeSerialization By Generating Class
 
 ## Requirement
 * Generate classes by avro schema file
@@ -15,7 +15,7 @@ mvn archetype:generate -DgroupId=serialization.by.generating.class -DartifactId=
 gradle init --type pom
 ```
 
-## Steps
+## Serialization Steps
 * Add Avro dependencies. Refer [pom.xml](pom.xml) or [build.gradle](build.gradle)
 * Download `avro`, `avro-tools` jar. Refer https://github.com/avinashbabudonthu/others/blob/master/avro/setup.md
 * Write avro schema file - [emp.avsc](src/main/resources/emp.avsc)
@@ -26,4 +26,7 @@ java -jar avro-tools-1.9.2.jar compile schema [path-to-avro-schema-file]\emp.avs
 ```
 java -jar avro-tools-1.9.2.jar compile schema C:\practice-projects\others\avro\serialization-by-generating-class\src\main\resources\emp.avsc C:\practice-projects\others\avro\serialization-by-generating-class\src\main\java
 ```
-* Use the classes and create objects and serialize. Refer [App.java](src/main/java/serialization/by/generatingClass/App.java)
+* Use the classes and create objects and serialize. Refer [Serialization.java](src/main/java/serialization/practice/Serialization.java)
+
+## DeSerialization Steps
+* Refer [DeserializationPractice.java](src/main/java/deserialization/practice/DeserializationPractice.java)

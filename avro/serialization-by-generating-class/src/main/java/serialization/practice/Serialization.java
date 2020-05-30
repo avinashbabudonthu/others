@@ -1,4 +1,4 @@
-package serialization.by.generatingClass;
+package serialization.practice;
 
 import java.io.File;
 
@@ -12,7 +12,7 @@ import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class App {
+public class Serialization {
 
 	@SneakyThrows
 	@Test
@@ -23,11 +23,12 @@ public class App {
 				.setAddress("address-1").build();
 		Employee employee3 = Employee.newBuilder().setId(3).setName("Avery").setAge(21).setSalary(12345)
 				.setAddress("address-1").build();
+		String absoluteFilePath = "C:\\practice-projects\\others\\avro\\serialization-by-generating-class\\files\\Employee.avro";
 
 		DatumWriter<Employee> employeeDatumWriter = new SpecificDatumWriter<>(Employee.class);
 		DataFileWriter<Employee> employeeDataFileWriter = new DataFileWriter<>(employeeDatumWriter);
-		employeeDataFileWriter.create(employee1.getSchema(), new File(
-				"C:\\practice-projects\\others\\avro\\serialization-by-generating-class\\files\\Employee.avro"));
+
+		employeeDataFileWriter.create(employee1.getSchema(), new File(absoluteFilePath));
 		employeeDataFileWriter.append(employee1);
 		employeeDataFileWriter.append(employee2);
 		employeeDataFileWriter.append(employee3);
