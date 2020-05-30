@@ -1,5 +1,6 @@
 # List of Projects
 * [Apache POI](apache-poi)
+* [AVRO](avro)
 * [Chocolatey](chocolatey)
 * [Commons Bean Utils](commons-bean-utils)
 * [Commons Compress](commons-compress)
