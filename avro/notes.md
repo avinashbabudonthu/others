@@ -259,3 +259,13 @@ DataFileReader												| lass provides random access to files written with Da
 org.apache.avro.Schema.Parser								| class is a parser for JSON-format schemas. It contains methods to parse the schema
 GenricRecord Interface										| provides methods to access the fields by name as well as index
 GenericData.Record											| 
+
+## Avro Serialization By Generating class
+* Read avro schema into program by either of the following
+	* Generating class corresponding to schema
+	* using parser library
+### Serialize data
+* Write an Avro schema.
+* Compile the schema using Avro utility. You get the Java code corresponding to that schema.
+* Populate the schema with the data.
+* Serialize it using Avro library
