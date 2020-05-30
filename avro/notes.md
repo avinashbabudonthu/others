@@ -254,3 +254,8 @@ class														| Description
 -------------------------------								| --------------------------------------------
 org.apache.avro.specific.SpecificDatumWriter				| implements the DatumWriter interface. converts Java objects into an in-memory serialized format
 org.apache.avro.specific.SpecificDatumReader				| implements the DatumReader interface. reads the data of a schema and determines in-memory data representation. SpecificDatumReader is the class which supports generated java classes
+DataFileWriter												| class writes a sequence serialized records of data conforming to a schema, along with the schema in a file
+DataFileReader												| lass provides random access to files written with DataFileWriter. It inherits the class `DataFileStream`
+org.apache.avro.Schema.Parser								| class is a parser for JSON-format schemas. It contains methods to parse the schema
+GenricRecord Interface										| provides methods to access the fields by name as well as index
+GenericData.Record											| 
