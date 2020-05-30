@@ -15,5 +15,5 @@ gradle init --type pom
 
 ## Steps
 * Add `avro` dependencies. Refer [pom.xml](pom.xml) or [build.gradle](build.gradle)
-* Serialization - Refer [Serialization.java](src/main/java/serialization/using/parsers/Serialization.java)
-* DeSerialization - Refer [DeSerialization.java](src/main/java/deserialization/using/parsers/DeSerialization.java)
+* Serialization - Refer [Serialization.java](src/main/java/serialization/using/parsers/SerializePractice.java)
+* DeSerialization - Refer [DeSerialization.java](src/main/java/deserialization/using/parsers/DeSerializePractice.java)
