@@ -167,3 +167,90 @@ float 			| single precision (32-bit) floating point number
 double			| double precision (64-bit) floating point number
 bytes			| sequence of 8-bit unsigned bytes
 string			| Unicode character sequence
+
+### Complext data types
+* Record
+* Enum
+* Array
+* Map
+* Union
+* Fixed
+
+#### Record
+* record data type in Avro is a collection of multiple attributes
+* It supports following attributes
+	* name: value of this field holds the name of the record
+	* namespace: value of this field holds the name of the namespace where the object is stored
+	* type: value of this attribute holds either the type of the document (record) or the datatype of the field in the schema
+	* fields: field holds a JSON array, which have the list of all of the fields in the schema, each having name and the type attributes
+```
+{
+	"type" : "record",
+	"namespace" : "Cerebro",
+	"name" : "Student",
+	"fields" : [
+		{ "name" : "Name" , "type" : "string" },
+		{ "name" : "age" , "type" : "int" }
+	]
+}
+```
+
+#### Enum
+* enumeration is a list of items in a collection
+* It supports following attributes
+	* name: value of this field holds the name of the enumeration
+	* namespace: value of this field contains the string that qualifies the name of the Enumeration
+	* symbols: value of this field holds the enum's symbols as an array of names
+```
+{
+   "type" : "enum",
+   "name" : "Numbers", 
+   "namespace": "data", 
+   "symbols" : [ "ONE", "TWO", "THREE", "FOUR" ]
+}
+```
+
+#### Array
+* data type defines an array field having a single attribute `items`
+* `items` attribute specifies the type of items in the array
+```
+{ "type" : "array", "items" : "int" }
+```
+
+#### Map
+* map data type is an array of key-value pairs, it organizes data as key-value pairs
+* The key for an Avro map must be a string
+* The values of a map hold the data type of the content of map
+```
+{"type" : "map", "values" : "int"}
+```
+
+#### Union
+* union datatype is used whenever the field has one or more datatypes
+* They are represented as JSON arrays
+* For example, if a field that could be either an int or null, then the union is represented as ["int", "null"]
+```
+{ 
+   "type" : "record", 
+   "namespace" : "cerebro", 
+   "name" : "employee", 
+   "fields" : 
+   [ 
+      { "name" : "experience", "type": ["int", "null"] }, { "name" : "age", "type": "int" } 
+   ] 
+}
+```
+
+#### Fixed
+* data type is used to declare a fixed-sized field that can be used for storing binary data
+* It has field name and data as attributes
+* Name holds the name of the field, and size holds the size of the field
+```
+{ "type" : "fixed" , "name" : "bdata", "size" : 1048576}
+```
+
+## APIs
+class														| Description
+-------------------------------								| --------------------------------------------
+org.apache.avro.specific.SpecificDatumWriter				| implements the DatumWriter interface. converts Java objects into an in-memory serialized format
+org.apache.avro.specific.SpecificDatumReader				| implements the DatumReader interface. reads the data of a schema and determines in-memory data representation. SpecificDatumReader is the class which supports generated java classes
