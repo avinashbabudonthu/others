@@ -125,3 +125,45 @@ create table emp(
 
 ## What is Serialization
 * Serialization is the process of translating data structures or objects state into binary or textual form to transport the data over network or to store on some persisten storage. Once the data is transported over network or retrieved from the persistent storage, it needs to be deserialized again. Serialization is termed as `marshalling` and deserialization is termed as `unmarshalling`
+
+## AVRO Schemas
+* Describe following details
+	* type of file. `record` by default
+	* location of record
+	* name of the record
+	* fields in the record with their corresponding data types
+### Schema contains
+* type
+* namespace
+* name
+* fields
+* default
+```
+{
+   "type" : "record",
+   "namespace" : "Cerebro",
+   "name" : "Student",
+   "fields" : [
+      { "name" : "Name" , "type" : "string" },
+      { "name" : "Age" , "type" : "int" }
+   ]
+}
+```
+* type: This field comes under the document as well as the under the field named `fields`
+	* In case of document, it shows the type of the document, generally a `record` because there are multiple fields
+	* When it is field, the type describes data type
+* namespace: This field describes the name of the namespace in which the object resides
+* name: This field comes under the document as well as the under the field named fields
+	* In case of document, it describes the schema name. This schema name together with the namespace, uniquely identifies the schema within the store (Namespace.schema-name). In the above example, the full name of the schema will be `Cerebro.Student`
+	* In case of fields, it describes name of the field
+
+### Primitive data types of Avro
+Data Type 		| Description
+----------		| ------------------
+null			| No Value
+int				| 32-bit signed integer
+long			| 64-bit signed integer
+float 			| single precision (32-bit) floating point number
+double			| double precision (64-bit) floating point number
+bytes			| sequence of 8-bit unsigned bytes
+string			| Unicode character sequence
