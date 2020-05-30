@@ -3,21 +3,20 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>serialization.by.generating.class</groupId>
-	<artifactId>serialization-by-generating-class</artifactId>
+	<groupId>serialization.using.parsers</groupId>
+	<artifactId>serialization-using-parsers</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
 
-	<name>serialization-by-generating-class</name>
+	<name>serialization-using-parsers</name>
 	<url>http://maven.apache.org</url>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>org.apache.avro</groupId>
 			<artifactId>avro</artifactId>
@@ -29,7 +28,7 @@
 			<artifactId>avro-tools</artifactId>
 			<version>1.9.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -58,4 +57,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>

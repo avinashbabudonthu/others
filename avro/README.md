@@ -4,3 +4,4 @@
 
 # Examples
 * [Serialization By Generating Classes](serialization-by-generating-class)
+* [Serialization Using Parsers](serialization-using-parsers)
