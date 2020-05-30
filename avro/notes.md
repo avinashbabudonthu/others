@@ -105,3 +105,23 @@ create table emp(
 * At kafka level we prefer Avro because we care about message being self explanatory and fully described as we are dealing with streaming
 * Avro has good support from Hadoop based technologies like Hive
 * Avro has choosen as the only supported data format from Confluent Schema Registry
+
+## Features of Avro
+* Avro is a language-neutral data serialization system.
+* It can be processed by many languages (currently C, C++, C#, Java, Python, and Ruby).
+* Avro creates binary structured format that is both compressible and splittable. Hence it can be efficiently used as the input to Hadoop MapReduce jobs.
+* Avro provides rich data structures. For example, you can create a record that contains an array, an enumerated type, and a sub record. These datatypes can be created in any language, can be processed in Hadoop, and the results can be fed to a third language.
+* Avro schemas defined in JSON, facilitate implementation in the languages that already have JSON libraries.
+* Avro creates a self-describing file named Avro Data File, in which it stores data along with its schema in the metadata section.
+* Avro is also used in Remote Procedure Calls (RPCs). During RPC, client and server exchange schemas in the connection handshake.
+
+## Working of Avro
+* Step 1 − Create schemas. Here you need to design Avro schema according to your data.
+* Step 2 − Read the schemas into your program. It is done in two ways −
+	* By Generating a Class Corresponding to Schema − Compile the schema using Avro. This generates a class file corresponding to the schema
+	* By Using Parsers Library − You can directly read the schema using parsers library.
+* Step 3 − Serialize the data using the serialization API provided for Avro, which is found in the package org.apache.avro.specific.
+* Step 4 − Deserialize the data using deserialization API provided for Avro, which is found in the package org.apache.avro.specific.
+
+## What is Serialization
+* Serialization is the process of translating data structures or objects state into binary or textual form to transport the data over network or to store on some persisten storage. Once the data is transported over network or retrieved from the persistent storage, it needs to be deserialized again. Serialization is termed as `marshalling` and deserialization is termed as `unmarshalling`
