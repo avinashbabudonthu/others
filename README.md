@@ -15,6 +15,7 @@
 * [Jenkins](jenkins)
 * [JFrog](jfrog)
 * [JMeter](jmeter)
+* [jolt](jolt)
 * [Lombok](lombok)
 * [Nexus](nexus)
 * [Open CSV](open-csv)
