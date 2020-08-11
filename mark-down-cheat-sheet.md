@@ -209,15 +209,4 @@ Emoji:
 
 :exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
 
-    Markup : Code appears between colons :EMOJICODE:
-
-Searchable Table, like this one :
-<form><input type="text" name="search" value="" id="id_search" placeholder="Search on that table" autofocus /></form>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.4.0/jquery.quicksearch.min.js"></script>
-<script type="text/javascript" defer async>$('input#id_search').quicksearch('table tbody tr');</script>
-
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell
+Markup : Code appears between colons :EMOJICODE:
