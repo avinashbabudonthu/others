@@ -1,3 +1,4 @@
 ## Servers
-* [Apache Server](apache-server)
-* [Websphere](websphere)
+* [apache-server](apache-server)
+* [weblogic](weblogic)
+* [websphere](websphere)
