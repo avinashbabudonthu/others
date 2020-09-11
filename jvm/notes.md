@@ -1,7 +1,6 @@
 # Architecture
 * JVM Introduction\
 ![picture](images/jvm_intro.jpg)
-![picture](images/jvm_intro_contd.jpg)
 
 * Overall architecture of JVM\
 ![picture](images/architecture.jpg)
@@ -11,8 +10,6 @@
 
 * JVM Internals\
 ![picture](images/jvm_internals.jpg)
-
-![picture](images/
 
 * JIT compiler converts Byte code to machine code\
 ![picture](images/generating_machine_code.jpg)
