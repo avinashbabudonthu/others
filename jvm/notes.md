@@ -27,5 +27,5 @@
 * Portability with compile once, run everywhere
 ![picture](images/portability.jpg)
 
-* Inefficiency in interpreter\
+* Sources of Inefficiency in interpreter\
 ![picture](images/source_of_inefficiency_in_interpreter.jpg)
