@@ -17,6 +17,7 @@
 * [JMeter](jmeter)
 * [jolt](jolt)
 * [jvm](jvm)
+* [karate](karate)
 * [linux](linux)
 * [Lombok](lombok)
 * [Nexus](nexus)

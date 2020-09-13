@@ -1,4 +1,4 @@
-# PDF Examples with IText Library
+# IText PDF Examples
 
 ## Create project using maven
 ```
@@ -10,8 +10,5 @@ mvn archetype:generate -DgroupId=com.itext -DartifactId=itext -Dversion=1.0 -Dar
 gradle init --type pom
 ```
 
-## Versions
-* Maven **3.5.2**
-* Gradle **5.0**
-
-## Dependencies
+## Materials
+* [Creating PDF with Java and iText - Tutorial](https://www.vogella.com/tutorials/JavaPDF/article.html)
