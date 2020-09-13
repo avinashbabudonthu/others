@@ -4,5 +4,9 @@
 * [Pdfcrowd](pdf-crowd)
 * [Evo Pdf](evo-pdf)
 
-## References
+## Materials
 * [Jenkov Tutorial](http://tutorials.jenkov.com/java-itext/index.html)
+
+## To do examples
+* pdf to html conversion
+* html to pdf conversion
