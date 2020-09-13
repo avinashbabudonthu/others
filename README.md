@@ -18,6 +18,7 @@
 * [jolt](jolt)
 * [jvm](jvm)
 * [karate](karate)
+* [kerberos](kerberos)
 * [kibana](kibana)
 * [linux](linux)
 * [Lombok](lombok)
