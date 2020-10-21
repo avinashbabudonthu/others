@@ -101,3 +101,19 @@ Setting JAVA property to "C:\Program Files\Java\jdk1.8.0_231\bin\java"
 * Access jboss admin console using url - `http://localhost:9990`\
 	* Enter credentials of user created above
 ![picture](images/jboss-admin-console.jpg)
+
+## Configure Jboss EAP 7.2.0 in STS
+* Window > Preferences > Server > Runtime Environments > click Add
+* Should have jboss plugin like below\
+![picture](images/jboss-plugins.jpg)
+* If jboss plugin are not there then go Help > Install New Software
+* Paste this url - https://download.jboss.org/jbosstools/photon/stable/updates/
+* Install Jboss server tools
+* Select appropriate jboss plugin version based on jboss version
+* Next\
+![picture](images/jboss-configuration-sts.jpg)
+* Give jboss home directory
+![picture](images/jboss-configuration-sts-2.jpg)
+* Start server
+* Access jboss - `http://localhost:8080`
+Access jboss admin console using url - `http://localhost:9990`
