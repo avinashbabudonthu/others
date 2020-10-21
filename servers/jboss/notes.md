@@ -116,4 +116,4 @@ Setting JAVA property to "C:\Program Files\Java\jdk1.8.0_231\bin\java"
 ![picture](images/jboss-configuration-sts-2.jpg)
 * Start server
 * Access jboss - `http://localhost:8080`
-Access jboss admin console using url - `http://localhost:9990`
+* Access jboss admin console using url - `http://localhost:9990`
