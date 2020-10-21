@@ -112,7 +112,7 @@ Setting JAVA property to "C:\Program Files\Java\jdk1.8.0_231\bin\java"
 * Select appropriate jboss plugin version based on jboss version
 * Next\
 ![picture](images/jboss-configuration-sts.jpg)
-* Give jboss home directory
+* Give jboss home directory\
 ![picture](images/jboss-configuration-sts-2.jpg)
 * Start server
 * Access jboss - `http://localhost:8080`
