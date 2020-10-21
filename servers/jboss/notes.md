@@ -96,8 +96,8 @@ Setting JAVA property to "C:\Program Files\Java\jdk1.8.0_231\bin\java"
 14:35:42,406 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
 14:35:42,407 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: JBoss EAP 7.2.0.GA (WildFly Core 6.0.11.Final-redhat-00001) started in 7685ms - Started 306 of 527 services (321 services are lazy, passive or on-demand)
 ```
-* Access jboss using url - `http://localhost:8080`
+* Access jboss using url - `http://localhost:8080`\
 ![picture](images/jboss-home-page.jpg)
-* Access jboss admin console using url - `http://localhost:9990`
+* Access jboss admin console using url - `http://localhost:9990`\
 	* Enter credentials of user created above
 ![picture](images/jboss-admin-console.jpg)
