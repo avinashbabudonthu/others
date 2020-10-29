@@ -257,8 +257,14 @@ org.apache.avro.specific.SpecificDatumReader				| implements the DatumReader int
 DataFileWriter												| class writes a sequence serialized records of data conforming to a schema, along with the schema in a file
 DataFileReader												| class provides random access to files written with DataFileWriter. It inherits the class `DataFileStream`
 org.apache.avro.Schema.Parser								| class is a parser for JSON-format schemas. It contains methods to parse the schema
-GenricRecord Interface										| provides methods to access the fields by name as well as index
-GenericData.Record											| 
+GenricRecord Interface										| provides methods to access the fields by name as well as index. `Object get(String key)` - Returns the value of a field given. `void put(String key, Object v)` - Sets the value of a field given its name
+GenericData.Record											| Constructor - `GenericData.Record(Schema schema)`
+
+## GenericData.Record methods
+* Object get(String key) - Returns the value of a field of the given name
+* Schema getSchema() - Returns the schema of this instance
+* void put(int i, Object v) - Sets the value of a field given its position in the schema
+* void put(String key, Object value) - Sets the value of a field given its name
 
 ## Avro Serialization By Generating class
 * Read avro schema into program by either of the following
