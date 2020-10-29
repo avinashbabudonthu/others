@@ -33,7 +33,9 @@
 							<goal>schema</goal>
 						</goals>
 						<configuration>
+							<!-- .avsc file location -->
 							<sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+							<!-- target location for generated classes -->
 							<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
 							<stringType>String</stringType>
 						</configuration>

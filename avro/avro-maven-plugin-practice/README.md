@@ -22,10 +22,12 @@ gradle init --type pom
 mvn clean compile package
 ```
 * `User` class will be created in `src/main/java` in `com.app.avro.model` package
-* Model generated in `src/main/`java` because
+* Model generated in `src/main/java` because
 ```
 <configuration>
+	<!-- .avsc file location -->
 	<sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
+	<!-- target location for generated classes -->
 	<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
 	<stringType>String</stringType>
 </configuration>
