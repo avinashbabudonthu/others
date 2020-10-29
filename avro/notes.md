@@ -134,8 +134,8 @@ create table emp(
 	* fields in the record with their corresponding data types
 ### Schema contains
 * type
-* namespace
 * name
+* namespace
 * fields
 * default
 ```
@@ -152,10 +152,10 @@ create table emp(
 * type: This field comes under the document as well as the under the field named `fields`
 	* In case of document, it shows the type of the document, generally a `record` because there are multiple fields
 	* When it is field, the type describes data type
-* namespace: This field describes the name of the namespace in which the object resides
-* name: This field comes under the document as well as the under the field named fields
+* name: This field comes under the document as well as the under `fields`
 	* In case of document, it describes the schema name. This schema name together with the namespace, uniquely identifies the schema within the store (Namespace.schema-name). In the above example, the full name of the schema will be `Cerebro.Student`
 	* In case of fields, it describes name of the field
+* namespace: This field describes the name of the namespace in which the object resides. This is `package` of generated class
 
 ### Primitive data types of Avro
 Data Type 		| Description
@@ -168,7 +168,7 @@ double			| double precision (64-bit) floating point number
 bytes			| sequence of 8-bit unsigned bytes
 string			| Unicode character sequence
 
-### Complext data types
+### Complex data types
 * Record
 * Enum
 * Array
@@ -255,7 +255,7 @@ class														| Description
 org.apache.avro.specific.SpecificDatumWriter				| implements the DatumWriter interface. converts Java objects into an in-memory serialized format
 org.apache.avro.specific.SpecificDatumReader				| implements the DatumReader interface. reads the data of a schema and determines in-memory data representation. SpecificDatumReader is the class which supports generated java classes
 DataFileWriter												| class writes a sequence serialized records of data conforming to a schema, along with the schema in a file
-DataFileReader												| lass provides random access to files written with DataFileWriter. It inherits the class `DataFileStream`
+DataFileReader												| class provides random access to files written with DataFileWriter. It inherits the class `DataFileStream`
 org.apache.avro.Schema.Parser								| class is a parser for JSON-format schemas. It contains methods to parse the schema
 GenricRecord Interface										| provides methods to access the fields by name as well as index
 GenericData.Record											| 

@@ -6,11 +6,12 @@ import org.apache.avro.file.DataFileReader;
 import org.apache.avro.io.DatumReader;
 import org.apache.avro.specific.SpecificDatumReader;
 import org.junit.Test;
-import org.mortbay.log.Log;
 
 import emp.schema.classes.Employee;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class DeserializationPractice {
 
 	@SneakyThrows
@@ -23,7 +24,7 @@ public class DeserializationPractice {
 		Employee employee = null;
 		while (employeeDataFileReader.hasNext()) {
 			employee = employeeDataFileReader.next();
-			Log.info("employee={}", employee);
+			log.info("employee={}", employee);
 		}
 
 		employeeDataFileReader.close();
