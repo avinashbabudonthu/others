@@ -3,5 +3,6 @@
 * https://www.tutorialspoint.com/avro/index.htm
 
 # Examples
+* [avro-maven-plugin-practice](avro-maven-plugin-practice)
 * [Serialization By Generating Classes](serialization-by-generating-class)
 * [Serialization Using Parsers](serialization-using-parsers)
