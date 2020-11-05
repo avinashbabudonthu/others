@@ -15,6 +15,6 @@ gradle init --type pom
 
 ## Examples
 * [BooleanUtils](src/test/java/com/lang3/BooleanUtils.java)
-* [ExceptionUtils](src/test/java/com/lang3/ExceptionUtils)
-* [StringUtils](src/test/java/com/lang3/StringUtils)
-* [ToStringBuilder](src/test/java/com/lang3/ToStringBuilderPractice)
+* [ExceptionUtils](src/test/java/com/lang3/ExceptionUtils.java)
+* [StringUtils](src/test/java/com/lang3/StringUtilsPractice.java)
+* [ToStringBuilder](src/test/java/com/lang3/ToStringBuilderPractice.java)
