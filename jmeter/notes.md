@@ -14,6 +14,11 @@
 
 ## Advantages of jmeter
 ![picture](images/advantages.jpg)
+* Open source
+* Platform independent
+* Good GUI
+* Supports scripting
+
 
 ## Installation of jmeter
 
