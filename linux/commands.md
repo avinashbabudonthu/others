@@ -1,5 +1,21 @@
 # Linux Commands
 
+## present working directory
+```
+pwd
+```
+## list of files
+```
+ls
+```
+## list all files including hidden
+```
+ls -a
+```
+## open explorer from present working directory
+```
+start .
+```
 ## Rename file
 ### Approach 1
 * Create a copy of the existing file with the new desired name and then delete the old file
@@ -55,3 +71,4 @@ $ mmv [options]
 ```
 $ man move
 ```
+
