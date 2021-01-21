@@ -72,3 +72,20 @@ $ mmv [options]
 $ man move
 ```
 
+## Download and install jdk 8
+* download jdk rpm
+```
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.rpm
+```
+* Install JDK 8
+```
+sudo yum install -y jdk-8u141-linux-x64.rpm
+```
+
+## Run java jar file as demon in linux
+```
+java -jar [jar-file-name].jar
+```
+```
+nohup java -jar zuul-eureka/accounts-service.jar &
+```
