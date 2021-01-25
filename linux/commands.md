@@ -15,6 +15,7 @@ ls -a
 ## open explorer from present working directory
 ```
 start .
+open .
 ```
 ## Rename file
 ### Approach 1
