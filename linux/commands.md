@@ -4,21 +4,25 @@
 ```
 pwd
 ```
+
 ## list of files
 ```
 ls
 ```
+
 ## list all files including hidden
 ```
 ls -a
 ```
+
 ## open explorer from present working directory
 ```
 start .
 open .
 ```
+
 ## Rename file
-### Approach 1
+### Solution 1
 * Create a copy of the existing file with the new desired name and then delete the old file
 * This creates a copy of the same file with a new name in the same location
 ```
@@ -28,7 +32,7 @@ $ cp oldfile newfile
 ```
 rm oldfile
 ```
-### Approach 2
+### Solution 2
 * This just moves the old file, to a new name
 ```
 $mv old-file-name  new-file-name
